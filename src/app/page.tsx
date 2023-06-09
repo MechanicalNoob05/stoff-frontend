@@ -1,3 +1,4 @@
+import DealsOfMonth from "./components/dealssection";
 import NewCollection from "./components/newcollection";
 
 export default function Home() {
@@ -10,9 +11,10 @@ export default function Home() {
           <p className="text-3xl py-10 text-justify">{para}</p>
           <button className="text-3xl font-medium bg-slate-200 px-6 py-4 shadow-lg w-max sm:animate-none animate-pulse">SHOP NOW</button>
         </div>
-        <div className="w-1/2 h-full sm:block hidden bg-[url('https://i.pinimg.com/originals/ab/36/16/ab36169df7a3817916ad75c3f5b76900.gif')] bg-cover bg-no-repeat blur-sm"></div>
+        <div className="w-1/2 h-full sm:block hidden bg-[url('https://i.pinimg.com/originals/ab/36/16/ab36169df7a3817916ad75c3f5b76900.gif')] bg-cover bg-no-repeat "></div>
       </div>
       <NewCollection/> 
+      <DealsOfMonth/>
     </div>
   )
 }

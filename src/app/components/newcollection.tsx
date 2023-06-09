@@ -8,7 +8,7 @@ export default function NewCollection() {
             {
                [1,2,3,4].map((item)=>{
                     return(
-                        <div key={item} className="bg-white w-full h-full p-6 flex flex-col justify-between">
+                        <div key={item} className="bg-white w-full h-full p-6 flex flex-col justify-between shadow">
                             <div className="bg-[url('https://i.pinimg.com/736x/bd/39/10/bd3910897402ce4a79e823c348b0311d.jpg')] h-full"></div>
                             <h1 className="py-4 font-medium text-2xl text-center">{item}</h1>
                         </div>
