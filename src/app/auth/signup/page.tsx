@@ -1,12 +1,18 @@
 export default function Page() {
   return (
         <div className="sm:p-10 pt-10 h-min flex">
-           <div className="md:sm:block hidden w-full flex justify-center bg-no-repeat bg-cover bg-[url('https://i.pinimg.com/564x/cc/ee/95/ccee95248a50ea90b0d04c5f346682cf.jpg')]">
-           </div> 
            <div className="sm:p-10 p-5 py-10 md:sm:w-2/3 w-full bg-slate-100 shadow-md">
                 <form>
-                    <h1 className="text-4xl font-bold underline decoration-3 decoration-indigo-500">LOGIN</h1>
+                    <h1 className="text-4xl font-bold underline decoration-3 decoration-red-500">SIGN UP</h1>
                     <div className="pt-6 flex flex-col">
+                        <label className="text-2xl pb-3 font-medium ">Name</label>
+                        <input className="text-2xl p-3 rounded-md" type="text" placeholder="john doe"></input>
+                    </div>
+                    <div className="pt-4 flex flex-col">
+                        <label className="text-2xl pb-3 font-medium ">Email</label>
+                        <input className="text-2xl p-3 rounded-md" type="email" placeholder="johndoe@xyz.com"></input>
+                    </div>
+                    <div className="pt-4 flex flex-col">
                         <label className="text-2xl pb-3 font-medium">Phone no.</label>
                         <input className="text-2xl p-3 rounded-md" type="text" placeholder="9090900909"></input>
                     </div>
@@ -33,9 +39,11 @@ export default function Page() {
                         <div className="border-b-4 w-full"></div>
                     </div>
                     <div className="pt-6 flex justify-center">
-                        <label className="text-xl">Don't have an account? <span className="text-red-500 underline">Sign up</span></label>
+                        <label className="text-xl">Already have an account? <span className="text-red-500 underline">Login</span></label>
                     </div>
                 </form>
+           </div> 
+           <div className="md:sm:block hidden w-full flex justify-center bg-no-repeat bg-cover bg-[url('https://i.pinimg.com/564x/53/3e/d9/533ed9d9db79cf780cac415b387ef108.jpg')]">
            </div> 
         </div>
     )
