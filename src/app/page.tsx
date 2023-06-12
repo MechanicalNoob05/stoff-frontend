@@ -1,5 +1,6 @@
 import DealsOfMonth from "./components/dealssection";
 import NewCollection from "./components/newcollection";
+import ProductsList from "./components/product";
 
 export default function Home() {
   const para = "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
@@ -15,7 +16,7 @@ export default function Home() {
       </div>
       <NewCollection/> 
       <DealsOfMonth/>
->>>>>>> 945a6387595ce222a4c0a0748118bd02d96d3efa
+      <ProductsList/>
     </div>
   )
 }
