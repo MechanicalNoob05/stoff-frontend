@@ -5,8 +5,6 @@ export default function Home() {
   const para = "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
   return (
     <div className="h-screen">
-<<<<<<< HEAD
-=======
       <div className="h-screen p-10 flex">
         <div className="sm:w-1/2 sm:p-14 flex flex-col justify-center">
           <h1 className="text-6xl font-semibold">Find The Best Style That Suits You</h1>
