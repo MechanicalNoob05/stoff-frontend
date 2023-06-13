@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 
 import { FaRegUserCircle } from "react-icons/fa";
@@ -7,18 +7,40 @@ import { FiSearch } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiUser, BiSupport, BiLogOutCircle } from "react-icons/bi"
 import { BsCartCheck } from "react-icons/bs"
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 export default function Navbar() {
-    const [open,setOpen] =useState(false);
+    const [open, setOpen] = useState(false);
+    const [mobileMenu, SetMobileMenu] = useState(false);
 
-    const dropDownMenuUser=()=>{
-           if(open===false){
-                 setOpen(true)
-           }else{
+    const dropDownMenuUserForWeb = () => {
+        if (open === false) {
+            setOpen(true)
+        } else {
             setOpen(false)
-           }
+        }
     }
+
+    const dropDownMenuUserForMobile = () => {
+        if (mobileMenu === false) {
+            SetMobileMenu(true)
+        } else {
+            SetMobileMenu(false)
+        }
+    }
+
+    // useEffect(()=>{
+        
+    //   document.addEventListener("click",outSideClick);
+    //   document.addEventListener('touchstart', outSideClick); 
+    // })
+
+    // const outSideClick=()=>{
+    //     if(mobileMenu === true){
+    //          SetMobileMenu(false)
+    //     }
+    // }
+    
     return (
         <>
             <nav className=" w-full box-border m-0  ">
@@ -38,15 +60,15 @@ export default function Navbar() {
                         </div>
                     </div>
                     <div className="basis-1/5  md:flex flex-row  text-xl   hidden">
-                        <button className="relative   basis-2/4" onClick={dropDownMenuUser}>
+                        <button className="relative   basis-2/4" onClick={dropDownMenuUserForWeb}>
                             <FaRegUserCircle
                                 size={40}
                                 className="block mr-auto ml-auto my-5"
                             />
                             <div className="absolute" >
-                                <div className={`flex flex-col border-1 bg-white p-1  border-black border-2 w-36 text-right rounded-md ${open?"h-30":"hidden"}`}>
+                                <div className={`flex flex-col border-1 bg-white p-1  border-black border-2 w-36 text-right rounded-md ${open ? "h-30" : "hidden"}`}>
                                     <a href="/" className="p-2 hover:bg-slate-200"><BiUser className="inline-block absolute left-4 " size={25} /> Profile</a>
-                                    <a href=""  className="p-2 hover:bg-slate-200"><BsCartCheck className="inline-block absolute left-4" size={25} />Orders</a>
+                                    <a href="" className="p-2 hover:bg-slate-200"><BsCartCheck className="inline-block absolute left-4" size={25} />Orders</a>
                                     <a href="" className="p-2 hover:bg-slate-200"> <BiSupport className="inline-block absolute left-4" size={25} /> Support</a>
                                     <a href="" className="p-2 hover:bg-slate-200"> <BiLogOutCircle className="inline-block absolute left-4" size={25} />Logout</a>
                                 </div>
@@ -61,8 +83,16 @@ export default function Navbar() {
                     </div>
                     {/* menu for mobile */}
                     <div className="basis-1/5 flex justify-center text-xl md:hidden ">
-                        <button>
+                        <button onClick={dropDownMenuUserForMobile}>
                             <GiHamburgerMenu size={35} />
+                            <div className="absolute right-0 top-16" >
+                                <div className={`flex flex-col border-1 bg-white p-1  border-black
+                                 border-2 w-32 text-right rounded-md right-10 ${mobileMenu ? "h-22" :"hidden"}`}>
+                                    <a href="/" className="p-2"><BiUser className="inline-block absolute left-4 " size={25} /> Profile</a>
+                                    <a href="" className="p-2"><AiOutlineShoppingCart className="inline-block absolute left-4" size={25} />Cart</a>
+
+                                </div>
+                            </div>
                         </button>
                     </div>
                 </div>
