@@ -1,4 +1,5 @@
 import DealsOfMonth from "./components/dealssection";
+import Footer from "./components/footer";
 import NewCollection from "./components/newcollection";
 import ProductsList from "./components/product";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <NewCollection/> 
       <DealsOfMonth/>
       <ProductsList/>
+      <Footer/>
     </div>
   )
 }
