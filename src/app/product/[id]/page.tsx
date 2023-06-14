@@ -96,6 +96,131 @@ export default function page() {
 
                 </div>
             </div>
+            <p className="font-semibold text-xl px-10 my-5">Similar Products</p>
+            <div className=" flex flex-row justify-around flex-wrap">
+                <div className="h-100 w-60 bg-slate-200 rounded m-7 ">
+                    <div>
+                        <img src="https://picsum.photos/250/300" alt="" className=" " />
+                    </div>
+                    <div className="px-1 py-2 ">
+                        <p className="font-semibold text-lg">
+                            Lorem ipsum dolor sit amet .
+                        </p>
+                        <p className="text-neutral-600 mb-2">Brand Name</p>
+                        <p className="font-semibold text-lg">$399</p>
+                    </div>
+                </div>
+                <div className="h-100 w-60 bg-slate-200 rounded m-7 ">
+                    <div>
+                        <img src="https://picsum.photos/250/300" alt="" className=" " />
+                    </div>
+                    <div className="px-1 py-2 ">
+                        <p className="font-semibold text-lg">
+                            Lorem ipsum dolor sit amet .
+                        </p>
+                        <p className="text-neutral-600 mb-2">Brand Name</p>
+                        <p className="font-semibold text-lg">$399</p>
+                    </div>
+                </div>
+                <div className="h-100 w-60 bg-slate-200 rounded m-7 ">
+                    <div>
+                        <img src="https://picsum.photos/250/300" alt="" className=" " />
+                    </div>
+                    <div className="px-1 py-2 ">
+                        <p className="font-semibold text-lg">
+                            Lorem ipsum dolor sit amet .
+                        </p>
+                        <p className="text-neutral-600 mb-2">Brand Name</p>
+                        <p className="font-semibold text-lg">$399</p>
+                    </div>
+                </div>
+                <div className="h-100 w-60 bg-slate-200 rounded m-7 ">
+                    <div>
+                        <img src="https://picsum.photos/250/300" alt="" className=" " />
+                    </div>
+                    <div className="px-1 py-2 ">
+                        <p className="font-semibold text-lg">
+                            Lorem ipsum dolor sit amet .
+                        </p>
+                        <p className="text-neutral-600 mb-2">Brand Name</p>
+                        <p className="font-semibold text-lg">$399</p>
+                    </div>
+                </div>
+                <div className="h-100 w-60 bg-slate-200 rounded m-7 ">
+                    <div>
+                        <img src="https://picsum.photos/250/300" alt="" className=" " />
+                    </div>
+                    <div className="px-1 py-2 ">
+                        <p className="font-semibold text-lg">
+                            Lorem ipsum dolor sit amet .
+                        </p>
+                        <p className="text-neutral-600 mb-2">Brand Name</p>
+                        <p className="font-semibold text-lg">$399</p>
+                    </div>
+                </div>
+                <div className="h-100 w-60 bg-slate-200 rounded m-7 ">
+                    <div>
+                        <img src="https://picsum.photos/250/300" alt="" className=" " />
+                    </div>
+                    <div className="px-1 py-2 ">
+                        <p className="font-semibold text-lg">
+                            Lorem ipsum dolor sit amet .
+                        </p>
+                        <p className="text-neutral-600 mb-2">Brand Name</p>
+                        <p className="font-semibold text-lg">$399</p>
+                    </div>
+                </div><div className="h-100 w-60 bg-slate-200 rounded m-7 ">
+                    <div>
+                        <img src="https://picsum.photos/250/300" alt="" className=" " />
+                    </div>
+                    <div className="px-1 py-2 ">
+                        <p className="font-semibold text-lg">
+                            Lorem ipsum dolor sit amet .
+                        </p>
+                        <p className="text-neutral-600 mb-2">Brand Name</p>
+                        <p className="font-semibold text-lg">$399</p>
+                    </div>
+                </div><div className="h-100 w-60 bg-slate-200 rounded m-7 ">
+                    <div>
+                        <img src="https://picsum.photos/250/300" alt="" className=" " />
+                    </div>
+                    <div className="px-1 py-2 ">
+                        <p className="font-semibold text-lg">
+                            Lorem ipsum dolor sit amet .
+                        </p>
+                        <p className="text-neutral-600 mb-2">Brand Name</p>
+                        <p className="font-semibold text-lg">$399</p>
+                    </div>
+                </div><div className="h-100 w-60 bg-slate-200 rounded m-7 ">
+                    <div>
+                        <img src="https://picsum.photos/250/300" alt="" className=" " />
+                    </div>
+                    <div className="px-1 py-2 ">
+                        <p className="font-semibold text-lg">
+                            Lorem ipsum dolor sit amet .
+                        </p>
+                        <p className="text-neutral-600 mb-2">Brand Name</p>
+                        <p className="font-semibold text-lg">$399</p>
+                    </div>
+                </div><div className="h-100 w-60 bg-slate-200 rounded m-7 ">
+                    <div>
+                        <img src="https://picsum.photos/250/300" alt="" className=" " />
+                    </div>
+                    <div className="px-1 py-2 ">
+                        <p className="font-semibold text-lg">
+                            Lorem ipsum dolor sit amet .
+                        </p>
+                        <p className="text-neutral-600 mb-2">Brand Name</p>
+                        <p className="font-semibold text-lg">$399</p>
+                    </div>
+                </div>
+                
+                <a href="/" className="font-semibold text-lg my-5 mx-3">See More products from similar category  →</a>
+
+
+               
+
+            </div>
 
 
         </>

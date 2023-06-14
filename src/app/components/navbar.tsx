@@ -7,11 +7,12 @@ import { FiSearch } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiUser, BiSupport, BiLogOutCircle } from "react-icons/bi"
 import { BsCartCheck } from "react-icons/bs"
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const [mobileMenu, SetMobileMenu] = useState(false);
+    const [categoryMenu, setCategoryMenu] = useState(false);
 
     const dropDownMenuUserForWeb = () => {
         if (open === false) {
@@ -29,8 +30,16 @@ export default function Navbar() {
         }
     }
 
+    const dropDownMenuForCategory = () => {
+        if (categoryMenu === false) {
+            setCategoryMenu(true)
+        } else {
+            setCategoryMenu(false)
+        }
+    }
+
     // useEffect(()=>{
-        
+
     //   document.addEventListener("click",outSideClick);
     //   document.addEventListener('touchstart', outSideClick); 
     // })
@@ -40,13 +49,13 @@ export default function Navbar() {
     //          SetMobileMenu(false)
     //     }
     // }
-    
+
     return (
         <>
             <nav className=" w-full box-border m-0  ">
                 <div className="flex flex-row flex-grow bg-[#C3B9B7]">
                     <a href="/" className="basis-1/5  hidden md:block">
-                        <p className="text-3xl px-6 py-5">StoffSpot</p>
+                        <p className="text-4xl pl-14 py-5">StoffSpot</p>
                     </a>
                     <div className="basis-4/5  my-4 px-[18px] md:basis-3/5 md:my-5 md:px-20  ">
                         <div className="relative">
@@ -59,7 +68,7 @@ export default function Navbar() {
                             <FiSearch size={28} className="absolute top-1 right-1" />
                         </div>
                     </div>
-                    <div className="basis-1/5  md:flex flex-row  text-xl   hidden">
+                    <div className="basis-1/5  md:flex flex-row  text-xl   hidden ">
                         <button className="relative   basis-2/4" onClick={dropDownMenuUserForWeb}>
                             <FaRegUserCircle
                                 size={40}
@@ -87,7 +96,7 @@ export default function Navbar() {
                             <GiHamburgerMenu size={35} />
                             <div className="absolute right-0 top-16" >
                                 <div className={`flex flex-col border-1 bg-white p-1  border-black
-                                 border-2 w-32 text-right rounded-md right-10 ${mobileMenu ? "h-22" :"hidden"}`}>
+                                 border-2 w-32 text-right rounded-md right-10 ${mobileMenu ? "h-22" : "hidden"}`}>
                                     <a href="/" className="p-2"><BiUser className="inline-block absolute left-4 " size={25} /> Profile</a>
                                     <a href="" className="p-2"><AiOutlineShoppingCart className="inline-block absolute left-4" size={25} />Cart</a>
 
@@ -104,19 +113,20 @@ export default function Navbar() {
                     }}
                 />
 
-                <div className="hidden md:flex flex-row text-center p-5 bg-[#FAF4FC] text-xl ">
-                    <a href="/" className="basis-2/12">
+                <div className=" relative hidden md:flex flex-row text-center p-5 bg-[#FAF4FC] text-xl ">
+                    <button className="basis-2/12" onClick={dropDownMenuForCategory}>
                         Women Western
-                    </a>
-                    <a href="/" className="basis-2/12">
+                    </button>
+                    <button className="basis-2/12" onClick={dropDownMenuForCategory}>
                         Womens Ethinic
-                    </a>
-                    <a href="/" className="basis-2/12">
+                    </button>
+                    <button className="basis-2/12" onClick={dropDownMenuForCategory}>
                         Men Fashion
-                    </a>
-                    <a href="/" className="basis-2/12">
+                    </button>
+                    <button className="basis-2/12" onClick={dropDownMenuForCategory}>
                         Kids Fashion
-                    </a>
+                    </button>
+
                     <a href="/" className="basis-2/12">
                         Trending
                     </a>
@@ -126,8 +136,49 @@ export default function Navbar() {
                     <a href="/" className="basis-1/12">
                         New
                     </a>
+
+
+                    {/* dropdown menu */}
+                    <div className={`absolute mt-12 flex flex-row mx-5  w-4/6 drop-shadow-2xl text-left  ${categoryMenu ? "h-52" : "hidden"}`}>
+                        <div className="[&>*]:block [&>*]:my-1  pl-14 py-4 text-sm basis-1/4 bg-slate-200  ">
+                            <a href="" className="font-semibold">Womens Western</a>
+                            <a href="" className="hover:text-red-400">Sarees</a>
+                            <a href="" className="hover:text-red-400">Kurta</a>
+                            <a href="" className="hover:text-red-400">Ethinic Dresses</a>
+                            <a href="" className="hover:text-red-400">Lehenga Choli</a>
+                            <a href="" className="hover:text-red-400">Plazzos</a>
+                            <a href="" className="hover:text-red-400">Patiala</a>
+                        </div>
+                        <div className="[&>*]:block [&>*]:my-1  pl-14 py-4 text-sm basis-1/4 bg-slate-300 ">
+                            <a href="" className="font-semibold">Womens Ethinic</a>
+                            <a href="" className="hover:text-red-400">Sarees</a>
+                            <a href="" className="hover:text-red-400">Kurta</a>
+                            <a href="" className="hover:text-red-400">Ethinic Dresses</a>
+                            <a href="" className="hover:text-red-400">Lehenga Choli</a>
+                            <a href="" className="hover:text-red-400">Plazzos</a>
+                            <a href="" className="hover:text-red-400">Patiala</a>
+                        </div>
+                        <div className="[&>*]:block [&>*]:my-1  pl-14 py-4 text-sm basis-1/4 bg-slate-200 ">
+                            <a href="" className="font-semibold">Men Fashion</a>
+                            <a href="" className="hover:text-red-400">Sarees</a>
+                            <a href="" className="hover:text-red-400">Kurta</a>
+                            <a href="" className="hover:text-red-400">Ethinic Dresses</a>
+                            <a href="" className="hover:text-red-400">Lehenga Choli</a>
+                            <a href="" className="hover:text-red-400">Plazzos</a>
+                            <a href="" className="hover:text-red-400">Patiala</a>
+                        </div>
+                        <div className="[&>*]:block [&>*]:my-1  pl-14 py-4 text-sm basis-1/4 bg-slate-300 ">
+                            <a href="" className="font-semibold">Kids Fashion</a>
+                            <a href="" className="hover:text-red-400">Sarees</a>
+                            <a href="" className="hover:text-red-400">Kurta</a>
+                            <a href="" className="hover:text-red-400">Ethinic Dresses</a>
+                            <a href="" className="hover:text-red-400">Lehenga Choli</a>
+                            <a href="" className="hover:text-red-400">Plazzos</a>
+                            <a href="" className="hover:text-red-400">Patiala</a>
+                        </div>
+                    </div>
                 </div>
-                <div className="relative w-full lg:max-w-sm"></div>
+
             </nav>
         </>
     );
