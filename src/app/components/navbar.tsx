@@ -9,6 +9,8 @@ import { BiUser, BiSupport, BiLogOutCircle } from "react-icons/bi"
 import { BsCartCheck } from "react-icons/bs"
 import { useState, useEffect } from "react";
 
+import { IconContext } from "react-icons";
+
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const [mobileMenu, SetMobileMenu] = useState(false);
@@ -68,14 +70,17 @@ export default function Navbar() {
                             <FiSearch size={28} className="absolute top-1 right-1" />
                         </div>
                     </div>
-                    <div className="basis-1/5  md:flex flex-row  text-xl   hidden ">
+                    <div className=" z-20 basis-1/5  md:flex flex-row  text-xl   hidden px-10 ">
                         <button className="relative   basis-2/4" onClick={dropDownMenuUserForWeb}>
-                            <FaRegUserCircle
-                                size={40}
-                                className="block mr-auto ml-auto my-5"
-                            />
+                            <IconContext.Provider value={{ color: "white" }}>
+                                <FaRegUserCircle
+                                    size={40}
+                                    className="block mr-auto ml-auto my-5"
+                                />
+                            </IconContext.Provider>
+
                             <div className="absolute" >
-                                <div className={`flex flex-col border-1 bg-white p-1  border-black border-2 w-36 text-right rounded-md ${open ? "h-30" : "hidden"}`}>
+                                <div className={`flex flex-col border-1 bg-white p-1  border-black border-2 w-36 text-right rounded-md z-10 ${open ? "h-30" : "hidden"}`}>
                                     <a href="/" className="p-2 hover:bg-slate-200"><BiUser className="inline-block absolute left-4 " size={25} /> Profile</a>
                                     <a href="" className="p-2 hover:bg-slate-200"><BsCartCheck className="inline-block absolute left-4" size={25} />Orders</a>
                                     <a href="" className="p-2 hover:bg-slate-200"> <BiSupport className="inline-block absolute left-4" size={25} /> Support</a>
@@ -84,10 +89,13 @@ export default function Navbar() {
                             </div>
                         </button>
                         <a href="/" className="basis-2/4">
-                            <AiOutlineShoppingCart
-                                size={40}
-                                className="block mr-auto ml-auto my-5"
-                            />
+                            <IconContext.Provider value={{ color: "white" }}>
+                                <AiOutlineShoppingCart
+                                    size={40}
+                                    className="block mr-auto ml-auto my-5"
+                                />
+                            </IconContext.Provider>
+
                         </a>
                     </div>
                     {/* menu for mobile */}
@@ -113,7 +121,7 @@ export default function Navbar() {
                     }}
                 />
 
-                <div className=" relative hidden md:flex flex-row text-center p-5 bg-[#FAF4FC] text-xl ">
+                <div className="z-10 relative hidden md:flex flex-row text-center p-5 bg-[#FAF4FC] text-xl ">
                     <button className="basis-2/12" onClick={dropDownMenuForCategory}>
                         Women Western
                     </button>
