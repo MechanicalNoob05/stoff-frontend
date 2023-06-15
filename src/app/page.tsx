@@ -13,7 +13,7 @@ export default function Home() {
           <button className="text-3xl font-medium bg-slate-200 px-6 py-4 shadow-lg w-max sm:animate-none animate-pulse">SHOP NOW</button>
         </div>
         <div className="w-1/2 h-1/2 lg:md:sm:block hidden ">
-          <img className="h-max w-max mx-auto" src="https://i.pinimg.com/originals/ab/36/16/ab36169df7a3817916ad75c3f5b76900.gif"/>
+          <img className="h-max w-max mx-auto" src="https://i.pinimg.com/originals/ab/36/16/ab36169df7a3817916ad75c3f5b76900.gif" alt="404"/>
         </div>
       </div>
       <NewCollection/> 
