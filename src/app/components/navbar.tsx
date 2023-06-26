@@ -75,7 +75,7 @@ export default function Navbar() {
 
                         </div>
                     </div>
-                    <div className=" z-20 basis-1/5  md:flex flex-row  text-xl   hidden px-12 ">
+                    <div className=" z-30 basis-1/5  md:flex flex-row  text-xl   hidden px-12 ">
                         <button className="relative   basis-2/4" onClick={dropDownMenuUserForWeb}>
                             <IconContext.Provider value={{ color: "white" }}>
                                 <FaRegUserCircle
@@ -157,7 +157,7 @@ export default function Navbar() {
 
             </nav>
 
-            <div className=" sticky top-0 hidden md:flex flex-row text-center p-5 bg-[#FAF4FC] text-xl  w-full">
+            <div className="z-20 sticky top-0 hidden md:flex flex-row text-center p-5 bg-[#FAF4FC] text-xl  w-full">
                 <button className="basis-2/12" onClick={dropDownMenuForCategory}>
                     Women Western
                 </button>

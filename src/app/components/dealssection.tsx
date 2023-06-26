@@ -1,4 +1,5 @@
 import Card from "./cards";
+import DealCard from "./DealCard";
 
 export default function DealsOfMonth() {   
     return(
@@ -9,7 +10,11 @@ export default function DealsOfMonth() {
                 {
                 [1,2,3,4,5].map((item)=>{
                         return(
-                            <Card key={item}/>
+                            <>
+                            {item===3?<DealCard key={item}/>:<Card key={item}/>}
+                            
+                            </>  
+                        
                         )
                     })
                 }

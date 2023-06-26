@@ -1,6 +1,8 @@
+import DealCard from "./components/DealCard";
 import DealsOfMonth from "./components/dealssection";
 import Footer from "./components/footer";
 import NewCollection from "./components/newcollection";
+
 
 export default function Home() {
   const para = "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
@@ -20,6 +22,7 @@ export default function Home() {
       <DealsOfMonth/>
       <DealsOfMonth/>
       <DealsOfMonth/>
+      {/* <DealCard/> */}
       <Footer/>
     </div>
   )
