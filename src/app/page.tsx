@@ -1,3 +1,4 @@
+import { ReduxProvider } from "@/redux/provider";
 import DealCard from "./components/DealCard";
 import DealsOfMonth from "./components/dealssection";
 import Footer from "./components/footer";
@@ -7,7 +8,8 @@ import NewCollection from "./components/newcollection";
 export default function Home() {
   const para = "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
   return (
-    <div  >
+    <ReduxProvider>
+<div  >
       <div className="h-screen p-10 flex">
         <div className="lg:md:sm:w-1/2 sm:p-14 flex flex-col justify-center">
           <h1 className="text-6xl font-semibold">Find The Best Style That Suits You</h1>
@@ -25,5 +27,8 @@ export default function Home() {
       {/* <DealCard/> */}
       <Footer/>
     </div>
+
+    </ReduxProvider>
+    
   )
 }
