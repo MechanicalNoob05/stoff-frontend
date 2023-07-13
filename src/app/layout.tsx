@@ -1,6 +1,8 @@
 import Navbar from './components/navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { Providers } from '../redux/provider'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,8 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Navbar/>
-      {children}
+        <Providers>
+        <Navbar/>
+          {children}
+        </Providers>
+        
       </body>
     </html>
   )
